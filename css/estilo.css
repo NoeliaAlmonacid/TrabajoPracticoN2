@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* h2 y h3*/
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem; 
+    color: #5490dd; 
+    font-weight: 500; 
+    text-align: center; 
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    color: #679ee6;
+    font-weight: 400; 
+    text-align: center;
+    margin-bottom: 1rem;
+    font-style: italic; 
+}
+
+.navbar {
+    background-color: #e6eaf385;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+    color: #343a40;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #007bff;
+
+}
+
+/* HERO */
+
+.colorBtn {
+    background-color: #3d8ce6;
+    color: #fff;
+}
+
+.colorBtn:hover {
+    background-color: #5b8cc9;
+    color: #fff;
+}
+
+.form-fondo {
+    background-image: url('/img/vuelo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.form-fondo input,
+.form-fondo label,
+.form-fondo button,
+.form-fondo small {
+    color: #131212;
+}
+
+.form-fondo .border {
+    border-color: rgba(255, 255, 255, 0.2);
+
+}
+
+.form-fondo small {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #e6eaf385;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.footer-column {
+    padding: 10px;
+    text-align: left;
+}
+
+legend {
+    font-size: 1.2rem;
+    color: #3542b4;
+}
+
+fieldset {
+    border: 2px solid #3542b4;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-label {
+    color: #383a4b;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: #3542b4;
+    border-color: #3542b4;
+}
+
+.btn-primary:hover {
+    background-color: #25328c;
+}
+
+.container {
+    max-width: 1000px;
+}
