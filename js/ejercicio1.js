@@ -1,3 +1,5 @@
+//EJERCICIO 1.1
+
 document.addEventListener("DOMContentLoaded", function() {
     const fechaVueloInput = document.getElementById("fecha_vuelo");
     const buscarBtn = document.querySelector("button.btn-primary");
@@ -12,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+//EJERCICIO 1.2
 
 document.addEventListener("DOMContentLoaded", function() {
     const fechaVueloInput = document.getElementById("fecha_vuelo");
@@ -53,3 +57,5 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+//EJERCICIO 2

@@ -48,51 +48,130 @@
             </div>
         </nav>
     </header>
-    <section>
-        <h2>Registro de Reserva</h2>
-        <form action="pagina2.html" method="post">
-            <fieldset>
-                <legend>Formulario de Registro de Reserva</legend>
-                <label for="origen">Origen:</label>
-                <input type="text" id="origen" name="origen" value="Córdoba" disabled><br><br>
-                <label for="destino">Destino:</label>
-                <input type="text" id="destino" name="destino" value="Mendoza" disabled><br><br>
-                <label for="fecha">Fecha de Vuelo:</label>
-                <input type="date" id="fecha" name="fecha" value="2024-08-18" disabled><br><br>
-                <label for="hora">Hora de Vuelo:</label>
-                <input type="time" id="hora" name="hora" value="15:00" disabled><br><br>
-                <label for="clase">Clase</label>
-                <select name="clase" id="clase">
-                    <option value="ejecutiva">Ejecutiva</option>
-                    <option value="economica">Economica</option>
-                </select><br><br>
-                <label for="cantidad_pasaje">Cantidad de Pasaje/es</label>
-                <input type="number" id="cantidad_pasaje" name="cantidad_pasaje" min="1" max="50" required><br><br>
-                <label for="ubicacion">Selección de Ubicación</label>
-                <select name="ubicacion" id="ubicacion">
-                    <option value="">Ventanilla</option>
-                    <option value="">Centro</option>
-                    <option value="">Pasillo</option>
-                </select><br><br>
-                <label for="num_silla">Selección de Nro de Silla</label>
-                <input type="number" name="num_silla" id="num_silla" min="1" max="50"><br><br>
-                <label for="apellido_nombre">Apellido y Nombre</label>
-                <input type="text" name="apellido_nombre" id="apellido_nombre" maxlength="100" required><br><br>
-                <label for="dni">DNI</label>
-                <input type="number" name="dni" id="dni" required><br><br>
-                <label for="fecha_nacimiento">Fecha de Nacimiento</label>
-                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento"><br><br>
-                <label>Sexo</label>
-                <input type="radio" name="femenino" id="femenino">
-                <label for="femenino">F</label>
-                <input type="radio" name="masculino" id="masculino">
-                <label for="masculino">M</label><br><br>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Registro de Reserva</h2>
+        <h3 class="text-center mb-4">Formulario de Registro de Reserva</h3>
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <form action="pagina2.html" method="post" class="row g-3 flex-grow-1">
+                <fieldset class="border p-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="origen" class="form-label">Origen:</label>
+                                <select name="origen" id="origen" class="form-select" required>
+                                    <option value="" disabled selected>Seleccione una opción</option>
+                                    <option value="cordoba">Córdoba</option>
+                                    <option value="mendoza">Mendoza</option>
+                                    <option value="tucuman">Tucumán</option>
+                                </select>
 
-                <button type="reset">CANCELAR</button>
-                <button type="submit">ACEPTAR</button>
-            </fieldset>
-        </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="destino" class="form-label">Destino:</label>
+                            <select name="destino" id="destino" class="form-select" required>
+                                <option value="" disabled selected>Seleccione una opción</option>
+                                <option value="cordoba">Córdoba</option>
+                                <option value="mendoza">Mendoza</option>
+                                <option value="tucuman">Tucumán</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="fecha_vuelo" class="form-label">Fecha de vuelo:</label>
+                                <input type="date" id="fecha_vuelo" name="fecha_vuelo" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="hora_vuelo" class="form-label">Hora de Vuelo:</label>
+                                <input type="time" id="hora_vuelo" name="hora_vuelo" value="15:00" class="form-control"
+                                    disabled><br><br>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="clase" class="form-label">Clase</label>
+                                <select name="clase" id="clase" class="form-control">
+                                    <option value="ejecutiva">Ejecutiva</option>
+                                    <option value="economica">Economica</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="cantidad_pasaje" class="form-label">Cantidad de Pasaje/es</label>
+                                <input type="number" id="cantidad_pasaje" name="cantidad_pasaje" min="1" max="50"
+                                    class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="ubicacion" class="form-label">Selección de Ubicación</label>
+                                <select name="ubicacion" id="ubicacion" class="form-control">
+                                    <option value="">Ventanilla</option>
+                                    <option value="">Centro</option>
+                                    <option value="">Pasillo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="num_silla" class="form-label">Selección de Nro de Silla</label>
+                                <input type="number" name="num_silla" id="num_silla" min="1" max="50"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="dni" class="form-label">DNI</label>
+                                <input type="number" name="dni" id="dni" class="form-control" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="apellido_nombre" class="form-label">Apellido y Nombre</label>
+                                <input type="text" name="apellido_nombre" id="apellido_nombre" maxlength="100"
+                                    class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+                                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="sexo" class="form-label">Sexo</label>
+                                <input type="radio" name="femenino" id="femenino" >
+                                <label for="femenino">F</label>
+                                <input type="radio" name="masculino" id="masculino" >
+                                <label for="masculino">M</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12 text-center mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg">ACEPTAR</button>
+                        <button type="reset" class="btn btn-secondary btn-lg">CANCELAR</button>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
     </section>
+
+
 
     <footer class="container-fluid">
         <div class="container">
