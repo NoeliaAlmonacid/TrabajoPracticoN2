@@ -13,7 +13,7 @@
     <!-- CSS PROPIO -->
     <link rel="stylesheet" href="/css/estilo.css">
     <!-- Archivo de js-->
-    <script src="/js/validaciones.js"></script>
+    <script src="/js/ejercicio2.js"></script>
     <!-- Titulo de pagina -->
     <title>Gestión de Vuelos</title>
 </head>
@@ -108,59 +108,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="ubicacion" class="form-label">Selección de Ubicación</label>
-                                <select name="ubicacion" id="ubicacion" class="form-control">
-                                    <option value="">Ventanilla</option>
-                                    <option value="">Centro</option>
-                                    <option value="">Pasillo</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="num_silla" class="form-label">Selección de Nro de Silla</label>
-                                <input type="number" name="num_silla" id="num_silla" min="1" max="50"
-                                    class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="dni" class="form-label">DNI</label>
-                                <input type="number" name="dni" id="dni" class="form-control" required>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="apellido_nombre" class="form-label">Apellido y Nombre</label>
-                                <input type="text" name="apellido_nombre" id="apellido_nombre" maxlength="100"
-                                    class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-                                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="mb-3">
-                                <label for="sexo" class="form-label">Sexo</label>
-                                <input type="radio" name="femenino" id="femenino" >
-                                <label for="femenino">F</label>
-                                <input type="radio" name="masculino" id="masculino" >
-                                <label for="masculino">M</label>
-                            </div>
-                        </div>
-
-                    </div>
-
-
+                    <div id="section-pasajeros"></div>
                     <div class="col-12 text-center mt-4">
                         <button type="submit" class="btn btn-primary btn-lg">ACEPTAR</button>
                         <button type="reset" class="btn btn-secondary btn-lg">CANCELAR</button>
