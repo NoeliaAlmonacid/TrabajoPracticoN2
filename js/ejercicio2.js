@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Validaciones del formulario principal
+
     const form = document.querySelector("form");
     const fechaInput = document.getElementById("fecha_vuelo");
     const origenInput = document.getElementById("origen");
@@ -9,31 +9,29 @@ document.addEventListener("DOMContentLoaded", function () {
         const fechaActual = new Date().toISOString().split("T")[0];
         const fechaVuelo = fechaInput.value;
 
-        // Validar que la fecha no sea anterior a la actual
+    
         if (fechaVuelo < fechaActual) {
             alert("La fecha de vuelo no puede ser anterior a la fecha actual.");
             e.preventDefault();
         }
 
-        // Validar que origen y destino no sean iguales
         if (origenInput.value === destinoInput.value) {
             alert("El origen y el destino no pueden ser iguales.");
             e.preventDefault();
         }
     });
 
-    // Validar cambios en Origen y Destino
+  
     origenInput.addEventListener("change", function () {
         const destinoOptions = destinoInput.options;
         for (let i = 0; i < destinoOptions.length; i++) {
-            destinoOptions[i].disabled = false; // Habilitar todas las opciones primero
+            destinoOptions[i].disabled = false; 
             if (destinoOptions[i].value === origenInput.value) {
                 destinoOptions[i].disabled = true; // Deshabilitar la opción que coincide con el origen
             }
         }
     });
 
-    // Generación dinámica de campos para pasajeros
     const cantidadPasajeInput = document.getElementById("cantidad_pasaje");
     const claseInput = document.getElementById("clase");
     const sectionPasajeros = document.getElementById("section-pasajeros");
@@ -52,17 +50,17 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Generar los campos para cada pasajero
+        
         for (let i = 0; i < cantidadPasaje; i++) {
             const pasajeroDiv = document.createElement("div");
             pasajeroDiv.classList.add("pasajero", "mb-4");
 
-            // Título para identificar al pasajero
+
             const pasajeroTitle = document.createElement("h4");
             pasajeroTitle.textContent = `Pasajero ${i + 1}`;
             pasajeroDiv.appendChild(pasajeroTitle);
 
-            // Ubicación
+        
             const ubicacionDiv = document.createElement("div");
             ubicacionDiv.classList.add("mb-3");
 
@@ -90,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ubicacionDiv.appendChild(ubicacionLabel);
             ubicacionDiv.appendChild(ubicacionSelect);
 
-            // Número de Silla
+            
             const sillaDiv = document.createElement("div");
             sillaDiv.classList.add("mb-3");
 
@@ -116,10 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sillaDiv.appendChild(sillaLabel);
             sillaDiv.appendChild(sillaInput);
 
-            // Otros campos (Apellido y Nombre, DNI, Fecha de Nacimiento, Sexo)
-            // Aquí deberías seguir el patrón del código anterior para generar los demás campos.
-
-            // Apellido y Nombre
+  
             const nombreDiv = document.createElement("div");
             nombreDiv.classList.add("mb-3");
 
@@ -138,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
             nombreDiv.appendChild(nombreLabel);
             nombreDiv.appendChild(nombreInput);
 
-            // DNI
             const dniDiv = document.createElement("div");
             dniDiv.classList.add("mb-3");
 
@@ -157,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
             dniDiv.appendChild(dniLabel);
             dniDiv.appendChild(dniInput);
 
-            // Fecha de Nacimiento
             const fechaDiv = document.createElement("div");
             fechaDiv.classList.add("mb-3");
 
@@ -174,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
             fechaDiv.appendChild(fechaLabel);
             fechaDiv.appendChild(fechaInput);
 
-            // Sexo
+
             const sexoDiv = document.createElement("div");
             sexoDiv.classList.add("mb-3");
 
@@ -184,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             sexoDiv.appendChild(sexoLabel);
 
-            // Masculino
+
             const sexoMContainer = document.createElement("div");
             sexoMContainer.classList.add("form-check");
 
@@ -204,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
             sexoMContainer.appendChild(sexoMInput);
             sexoMContainer.appendChild(sexoMLabel);
 
-            // Femenino
+
             const sexoFContainer = document.createElement("div");
             sexoFContainer.classList.add("form-check");
 
@@ -223,7 +216,6 @@ document.addEventListener("DOMContentLoaded", function () {
             sexoFContainer.appendChild(sexoFInput);
             sexoFContainer.appendChild(sexoFLabel);
 
-            // Añadir ambos contenedores al div principal de sexo
             sexoDiv.appendChild(sexoMContainer);
             sexoDiv.appendChild(sexoFContainer);
 

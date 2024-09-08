@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS BS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS PROPIO -->
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/ejercicio3.css">
+    <!-- Archivo de js-->
+    <script src="/js/ejercicio3.js"></script>
+    <!-- Titulo de pagina -->
+    <title>Gestión de Vuelos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="pagina1.html">
+                    <img src="/img/vuelo.jpg" alt="Logo" class="img-fluid rounded" style="max-width: 100px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fuentes">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Registrar Usuario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Consulta vuelos/Reserva</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ver Reserva</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Eliminar Reserva</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Registro de Reserva</h2>
+        <h3 class="text-center mb-4">Formulario de Registro de Reserva</h3>
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <form  class="row g-3 flex-grow-1" id="formulario-reserva">
+                <fieldset class="border p-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="origen" class="form-label">Origen:</label>
+                                <select name="origen" id="origen" class="form-select" required>
+                                    <option value="" disabled selected>Seleccione una opción</option>
+                                    <option value="Cordoba">Córdoba</option>
+                                    <option value="Mendoza">Mendoza</option>
+                                    <option value="Tucuman">Tucumán</option>
+                                </select>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="destino" class="form-label">Destino:</label>
+                            <select name="destino" id="destino" class="form-select" required>
+                                <option value="" disabled selected>Seleccione una opción</option>
+                                <option value="Cordoba">Córdoba</option>
+                                <option value="Mendoza">Mendoza</option>
+                                <option value="Tucuman">Tucumán</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="fecha_vuelo" class="form-label">Fecha de vuelo:</label>
+                                <input type="date" id="fecha_vuelo" name="fecha_vuelo" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="clase" class="form-label">Clase</label>
+                                <select name="clase" id="clase" class="form-control">
+                                    <option value="Ejecutiva">Ejecutiva</option>
+                                    <option value="Economica">Economica</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+
+                                <label for="ubicacion" class="form-label">Selección de Ubicación</label>
+                                <select name="ubicacion" id="ubicacion" class="form-control">
+                                    <option value="Ventanilla">Ventanilla</option>
+                                    <option value="Centro">Centro</option>
+                                    <option value="Pasillo">Pasillo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="cantidad_pasaje" class="form-label">Cantidad de Pasaje/es</label>
+                                <input type="number" id="cantidad_pasaje" name="cantidad_pasaje" min="1" max="50"
+                                    class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="apellido_nombre" class="form-label">Apellido y Nombre</label>
+                                <input type="text" name="apellido_nombre" id="apellido_nombre" maxlength="100" required
+                                    class="form-control">
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="dni" class="form-label">DNI</label>
+                                <input type="number" name="dni" id="dni" class="form-control" required>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+                                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mt-4">
+                        <button type="submit" id="btnAceptar" class="btn btn-primary btn-lg">ACEPTAR</button>
+                        <button type="reset" class="btn btn-secondary btn-lg">CANCELAR</button>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
+    </section>
+    <section class="container my-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Apellido y Nombre</th>
+                    <th>DNI</th>
+                    <th>Origen</th>
+                    <th>Destino</th>
+                    <th>Fecha</th>
+                    <th>Clase</th>
+                    <th>Asiento</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                
+            </tbody>
+        </table>
+
+
+    </section>
+
+
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-column">
+                    <h5>Contacto</h5>
+                    <p>Teléfono: +54 11 1234-5678</p>
+                    <p>compañiargentina@compania.com.ar</p>
+                </div>
+                <div class="col-md-4 footer-column">
+                    <h5>Ubicación</h5>
+                    <p>Buenos Aires, Argentina</p>
+                    <p>Av. Siempre Viva 742</p>
+                </div>
+                <div class="col-md-4 footer-column">
+                    <h5>Redes Sociales</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com" target="_blank" class="bi bi-instagram"></a>
+                        <a href="https://www.facebook.com" target="_blank" class="bi bi-facebook"></a>
+                        <a href="https://www.twitter.com" target="_blank" class="bi bi-twitter"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</body>
+
+</html>
